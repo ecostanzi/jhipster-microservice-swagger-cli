@@ -26,3 +26,4 @@ spring:
                     - git-branch=${git.branch:}
             host: localhost
             port: 8500
+            enabled: false

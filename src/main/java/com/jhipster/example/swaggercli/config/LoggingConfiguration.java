@@ -2,6 +2,7 @@ package com.jhipster.example.swaggercli.config;
 
 import java.net.InetSocketAddress;
 import java.util.Iterator;
+import java.util.Optional;
 
 import io.github.jhipster.config.JHipsterProperties;
 
@@ -50,10 +51,10 @@ public class LoggingConfiguration {
     private final JHipsterProperties jHipsterProperties;
 
     public LoggingConfiguration(@Value("${spring.application.name}") String appName, @Value("${server.port}") String serverPort,
-         ConsulRegistration consulRegistration, @Value("${info.project.version:}") String version, JHipsterProperties jHipsterProperties) {
+                                Optional<ConsulRegistration> consulRegistrationOpt, @Value("${info.project.version:}") String version, JHipsterProperties jHipsterProperties) {
         this.appName = appName;
         this.serverPort = serverPort;
-        this.consulRegistration = consulRegistration;
+        this.consulRegistration = consulRegistrationOpt.orElse(null);
         this.version = version;
         this.jHipsterProperties = jHipsterProperties;
         if (jHipsterProperties.getLogging().getLogstash().isEnabled()) {
