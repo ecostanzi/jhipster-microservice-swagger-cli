@@ -1,0 +1,33 @@
+{
+  "generator-jhipster": {
+    "databaseType": "sql",
+    "devDatabaseType": "h2Disk",
+    "enableHibernateCache": false,
+    "enableSwaggerCodegen": true,
+    "enableTranslation": false,
+    "jhiPrefix": "jhi",
+    "messageBroker": false,
+    "nativeLanguage": "en",
+    "packageName": "com.jhipster.example.swaggercli",
+    "packageFolder": "com/jhipster/example/swaggercli",
+    "prodDatabaseType": "mysql",
+    "searchEngine": false,
+    "serviceDiscoveryType": "consul",
+    "skipClient": true,
+    "testFrameworks": [],
+    "websocket": false,
+    "baseName": "swaggercli",
+    "applicationType": "microservice",
+    "authenticationType": "jwt",
+    "cacheProvider": "no",
+    "buildTool": "maven",
+    "serverPort": "8082",
+    "skipUserManagement": true,
+    "jhipsterVersion": "5.8.2",
+    "clientPackageManager": "npm",
+    "jwtSecretKey": "YjgwZDFjNDZhMGI4N2NkMDEyNGExMDE1N2E5NjhmYWFiYzhjNTAyMmZkZmEwYTA5NTQ1MTc0OGFjNzY3ZTRmYTBiZWE0MDU0ZjU1MzA0NTY1ZDA5Yjc2MGI1MmNkN2I4ZDk3NmUwYWM1YTNmMDhjN2M0OGRmMjczMzVkMWRhNDI=",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": []
+  }
+}
