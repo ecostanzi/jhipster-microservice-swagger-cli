@@ -329,6 +329,10 @@
             <groupId>io.dropwizard.metrics</groupId>
             <artifactId>metrics-core</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-oauth2</artifactId>
+        </dependency>
         <!-- jhipster-needle-maven-add-dependency -->
     </dependencies>
 
@@ -685,6 +689,30 @@
                                 <validateSpec>true</validateSpec>
                                 <configOptions>
                                     <delegatePattern>true</delegatePattern>
+                                </configOptions>
+                            </configuration>
+                        </execution>
+                        <execution>
+                            <id>petstore</id>
+                            <goals>
+                                <goal>generate</goal>
+                            </goals>
+                            <configuration>
+                                <inputSpec>${project.basedir}/src/main/resources/swagger/petstore/api.yml</inputSpec>
+                                <generateModels>true</generateModels>
+                                <modelPackage>com.jhipster.example.swaggercli.client.petstore.model</modelPackage>
+                                <generateApis>true</generateApis>
+                                <apiPackage>com.jhipster.example.swaggercli.client.petstore.api</apiPackage>
+                                <supportingFilesToGenerate>ApiKeyRequestInterceptor.java,ClientConfiguration.java</supportingFilesToGenerate>
+                                <generatorName>spring</generatorName>
+                                <templateDirectory>${project.basedir}/templates/spring-cloud</templateDirectory>
+                                <library>spring-cloud</library>
+                                <modelNameSuffix>ClientDTO</modelNameSuffix>
+                                <configOptions>
+                                    <java8>true</java8>
+                                    <dateLibrary>java8</dateLibrary>
+                                    <basePackage>com.jhipster.example.swaggercli.client.petstore</basePackage>
+                                    <configPackage>com.jhipster.example.swaggercli.client</configPackage>
                                 </configOptions>
                             </configuration>
                         </execution>
