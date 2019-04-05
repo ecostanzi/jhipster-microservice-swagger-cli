@@ -709,6 +709,7 @@
                                 <library>spring-cloud</library>
                                 <modelNameSuffix>ClientDTO</modelNameSuffix>
                                 <configOptions>
+                                    <title>petstore</title>
                                     <java8>true</java8>
                                     <dateLibrary>java8</dateLibrary>
                                     <basePackage>com.jhipster.example.swaggercli.client.petstore</basePackage>
